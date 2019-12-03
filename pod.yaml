@@ -15,6 +15,3 @@ spec:
       args:
       - -c 
       - "echo HI && tail -f /dev/null"
-      resources:
-        requests:
-          memory: 72G
