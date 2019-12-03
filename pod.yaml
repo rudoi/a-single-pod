@@ -1,6 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  labels:
+    app.kubernetes.io/instance: a-single-pod
+    foo: bar
   name: hello
   namespace: default
 spec:
@@ -12,3 +15,6 @@ spec:
       args:
       - -c 
       - "echo HI && tail -f /dev/null"
+      resources:
+        requests:
+          memory: 72G
